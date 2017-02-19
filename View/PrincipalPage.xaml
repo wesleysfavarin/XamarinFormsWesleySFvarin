@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Marvel.PrincipalPage" Title="Personagens">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness">
+      <OnPlatform.iOS>
+        0, 10, 0, 0
+      </OnPlatform.iOS>
+      <OnPlatform.Android>
+        5, 10, 0, 0
+      </OnPlatform.Android>
+      <OnPlatform.WinPhone>
+        0, 0, 0, 0
+      </OnPlatform.WinPhone>
+    </OnPlatform>
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <StackLayout>
+
+      <SearchBar
+				Text="{Binding SearchText}"
+				SearchCommand="{Binding SearchByName}"></SearchBar>
+
+      <ListView x:Name="listCharacters" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding CharacterList}" CachingStrategy="RecycleElement" RefreshCommand="{Binding Refresh}" IsRefreshing="{Binding IsBusy}">
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+                <Label Text="{Binding Name}">
+                </Label>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+        </ListView.ItemTemplate>
+      </ListView>
+      <ActivityIndicator IsVisible="{Binding IsBusy}"
+                         IsRunning="{Binding IsBusy}"
+                         VerticalOptions="Center"
+                         HorizontalOptions="Center"
+                          Color="#B71C1C"
+                         BackgroundColor="Transparent" />
+    </StackLayout>
+  </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Marvel.View.AboutPage">
+  <ScrollView>
+    <StackLayout Orientation="Vertical" Spacing="10">
+      <Image Aspect="AspectFill" Source="slidewsf.jpg"/>
+      <StackLayout Spacing="10"
+                   Padding="10"
+                   VerticalOptions="FillAndExpand">
+
+        <Label Text="Olá pessoal, meu nome é Wesley S. Favarin, gostaria de agradece-los por estar participando desse processo seletivo, sou desenvolvedor mobile xamarin já a algum tempo, atualmente sou o único desenvolvedor mobile na empresa brasil risk empresa onde trabalho, crio apps voltados para rastreamento de veículos, acompanhamento de cargas, apps que ajudam na tomada de decisão. Faço todo o processo de desenvolvimento, desde a criação do app até publicação nas lojas."
+                       LineBreakMode="WordWrap"/>
+
+        <Label Text="Atualmente estou buscando uma nova oportunidade pois sou contratado como consultor (PJ), o valor é mais alto porém a estabilidade é bem baixa."
+                      LineBreakMode="WordWrap"/>
+
+
+
+
+        <StackLayout Orientation="Horizontal"
+                     HorizontalOptions="CenterAndExpand"
+                     Spacing="10">
+
+          <Image x:Name="linkedin" Source="linkedin.png"/>
+          
+        </StackLayout>
+
+      </StackLayout>
+
+    </StackLayout>
+
+  </ScrollView>
+</ContentPage>
